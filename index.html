@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anney</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/!Favicon.png" type="image/png">
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-logo-text" id="top">Anney</h1>
+    <button class="mobile-menu-button" aria-label="Toggle Navigation" onclick="toggleMobileMenu()">☰</button>
+    <nav class="main-navigation" id="mainNav">
+      <a href="#top" class="nav-link active" aria-current="page" onclick="handleNavLinkClick(this)">Home</a>
+      <a href="#perfume-collection" class="nav-link" onclick="handleNavLinkClick(this)">Perfumes</a>
+      <a href="#product-info" class="nav-link" onclick="handleNavLinkClick(this)">Product Info</a>
+      <a href="#our-story" class="nav-link" onclick="handleNavLinkClick(this)">Our Story</a>
+      <a href="#about-us" class="nav-link" onclick="handleNavLinkClick(this)">About Us</a>
+      <a href="#faqs" class="nav-link" onclick="handleNavLinkClick(this)">FAQs</a>
+      <a href="#contact-us" class="nav-link" onclick="handleNavLinkClick(this)">Contact Us</a>
+      <a href="#" class="nav-link" onclick="handleNavLinkClick(this)">My Account</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="image-carousel" aria-label="Image Carousel">
+      <div class="carousel-track">
+        <div class="carousel-item" role="group" aria-label="Slide 1"></div>
+        <div class="carousel-item" role="group" aria-label="Slide 2"></div>
+        <div class="carousel-item" role="group" aria-label="Slide 3"></div>
+      </div>
+
+      <div class="carousel-navigation-dots" role="tablist" aria-label="Carousel Navigation">
+        <button class="carousel-dot active" role="tab" aria-selected="true" aria-label="Go to slide 1" onclick="goToCarouselSlide(0)"></button>
+        <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to slide 2" onclick="goToCarouselSlide(1)"></button>
+        <button class="carousel-dot" role="tab" aria-selected="false" aria-label="Go to slide 3" onclick="goToCarouselSlide(2)"></button>
+      </div>
+
+      <button class="carousel-navigation-button prev" aria-label="Previous Slide" onclick="moveCarouselSlide(-1)"></button>
+      <button class="carousel-navigation-button next" aria-label="Next Slide" onclick="moveCarouselSlide(1)"></button>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="perfume-collection" id="perfume-collection">
+      <h2 class="section-title">BEST SELLING</h2>
+      <div class="product-collection-grid">
+        <article class="product-collection-item">
+          <div class="product-image-container">
+            <img src="images/Women1Coco.png" alt="Women's Perfume Coco">
+          </div>
+          <h2 class="product-title">Coco Blossom</h2>
+          <button class="buy-now-button">Buy</button>
+        </article>
+        <article class="product-collection-item">
+          <div class="product-image-container">
+            <img src="images/Women2Bomb.png" alt="Women's Perfume Bomb">
+          </div>
+          <h2 class="product-title">Bombshell</h2>
+          <button class="buy-now-button">Buy</button>
+        </article>
+        <article class="product-collection-item">
+          <div class="product-image-container">
+            <img src="images/Men1Savage.png" alt="Men's Cologne Savage">
+          </div>
+          <h2 class="product-title">Savage Freshness</h2>
+          <button class="buy-now-button">Buy</button>
+        </article>
+        <article class="product-collection-item">
+          <div class="product-image-container">
+            <img src="images/Men2Eros.png" alt="Men's Cologne Eros">
+          </div>
+          <h2 class="product-title">Eros Desire</h2>
+          <button class="buy-now-button">Buy</button>
+        </article>
+        <article class="product-collection-item">
+          <div class="product-image-container">
+            <img src="images/Unisex1Cucumber.png" alt="Unisex Perfume Cucumber">
+          </div>
+          <h2 class="product-title">Cucumber Melon</h2>
+          <button class="buy-now-button">Buy</button>
+        </article>
+        <article class="product-collection-item">
+          <div class="product-image-container">
+            <img src="images/Unisex2Pear.png" alt="Unisex Perfume Pear">
+          </div>
+          <h2 class="product-title">Pear Juicy Freesia</h2>
+          <button class="buy-now-button">Buy</button>
+        </article>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="shop-by-category-section">
+      <h2 class="section-title">SHOP BY CATEGORY</h2>
+      <div class="category-items-grid">
+        <article class="category-item">
+          <div class="category-circle red"></div>
+          <p class="category-label">For Women</p>
+        </article>
+        <article class="category-item">
+          <div class="category-circle green"></div>
+          <p class="category-label">For Men</p>
+        </article>
+        <article class="category-item">
+          <div class="category-circle blue"></div>
+          <p class="category-label">Unisex</p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="info-section product-details" id="product-info">
+      <div class="section-text">
+        <h2>Product Info</h2>
+        <p>At Anney Fragrances, every scent is a reflection of identity and emotion. Our 50mL oil-based perfumes contain 30% fragrance oil for long-lasting wear, praised by many for their staying power.</p>
+        <p>Each scent is hypoallergenic, available in 31 unique variants, and offers a perfect balance of quality and affordability. Discover the fragrance that feels uniquely yours.</p>
+      </div>
+      <div class="section-background"></div>
+    </section>
+
+    <section class="info-section our-story" id="our-story">
+      <div class="section-text">
+        <h2>Our Story</h2>
+        <p>Anney Fragrances began with a simple idea: scent has the power to move, to transform, and to stay with us. What started as a quiet passion grew into a commitment to creating meaningful fragrances that connect with people.</p>
+        <p>Guided by creativity and care, we continue to craft perfumes that speak to the soul and celebrate the beauty of individuality.</p>
+      </div>
+      <div class="section-background"></div>
+    </section>
+
+    <section class="info-section about-us" id="about-us">
+      <div class="section-text">
+        <h2>About Us</h2>
+        <p>We are an independent fragrance house dedicated to the timeless craft of perfumery. With every creation, we aim to capture emotion in a bottle, offering something personal, poetic, and unforgettable.</p>
+        <p>Our team blends creative vision with deep technical knowledge to create scents that are both artful and wearable. We invite you to explore and find the fragrance that becomes your signature.</p>
+      </div>
+      <div class="section-background"></div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="faq-section" id="faqs">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="accordion-container">
+        <div class="accordion-item">
+          <div class="accordion-header">What are your delivery options?</div>
+          <div class="accordion-content">We offer standard, express, and same-day delivery depending on your location.</div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">Can I return my order?</div>
+          <div class="accordion-content">Yes, we accept returns within 30 days of purchase if the item is unused and in original packaging.</div>
+        </div>
+        <div class="accordion-item">
+          <div class="accordion-header">How can I track my order?</div>
+          <div class="accordion-content">Once your order ships, you will receive a tracking number via email to monitor your package.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <section class="contact-us-section" id="contact-us">
+      <h2 class="section-title">Contact Us</h2>
+      <form class="contact-form">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required class="form-input">
+
+        <label for="email" class="form-label">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required class="form-input">
+
+        <label for="message" class="form-label">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required class="form-textarea"></textarea>
+
+        <button type="submit" class="form-submit-button">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Anney. All rights reserved.</p>
+  </footer>
+
+  <a href="#top" id="jump-to-top">
+    <svg viewBox="0 0 24 24" fill="white">
+      <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+      <path d="M0 0h24v24H0z" fill="none"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
